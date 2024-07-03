@@ -25,6 +25,19 @@ def load_data(file_path, sheet_name):
     return df
 
 def main():
+    st.sidebar.title("Ayuda")
+    st.sidebar.info("""
+        Esta aplicación permite cargar y analizar datos de cuentas administradas por las AFORE. 
+        Siga estos pasos:
+
+        1. **Cargar archivo xlsx:** Utilice el botón para cargar el archivo Excel.
+        2. **Seleccionar Hoja:** Elija la hoja deseada del archivo cargado.
+        3. **Filtrar Datos:** Seleccione una descripción del concepto para filtrar los datos.
+        4. **Ver Datos y Estadísticas:** Visualice los datos filtrados y sus estadísticas descriptivas.
+        5. **Proyección de Datos:** Seleccione un modelo (SARIMA o Suavizado Exponencial) para proyectar datos futuros.
+        6. **Ver Proyecciones:** Visualice los datos originales y las proyecciones en gráficos interactivos.
+    """)
+
     st.title('CONSAR: Cuentas Administradas por las AFORE')
 
     # Cargar el archivo xlsx
